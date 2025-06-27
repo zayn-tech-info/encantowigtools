@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   darkMode: ["class"],
   content: [
@@ -52,6 +53,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Custom colors for the product section
+        "custom-primary": "#d1008f",
+        "custom-primary-dark": "#a8006f",
+        "custom-primary-light": "#e633a7",
       },
       borderRadius: {
         lg: "var(--radius)",

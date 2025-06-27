@@ -2,14 +2,10 @@ import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
 } from "@headlessui/react";
+import Badge from '@mui/material/Badge';
 import {
   Bars3Icon,
-  BellIcon,
   ShoppingCartIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
@@ -28,7 +24,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center fixed w-full z-50">
       <Disclosure as="nav" className="bg-secondary w-full max-w-7xl">
         <div className="mx-auto px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
@@ -83,7 +79,9 @@ export default function Example() {
               >
                 <span className="absolute -inset-1.5" />
                 <span className="sr-only">View notifications</span>
-                <ShoppingCartIcon aria-hidden="true" className="size-6" />
+                <Badge badgeContent={4} color="success">
+                  <ShoppingCartIcon aria-hidden="true" className="size-6" />
+                </Badge>
               </button>
             </div>
           </div>
